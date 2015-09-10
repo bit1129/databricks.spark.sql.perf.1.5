@@ -26,7 +26,7 @@ import org.apache.spark.sql.{AnalysisException, DataFrame, SQLContext}
 import org.apache.spark.sql.catalyst.analysis.UnresolvedRelation
 import org.apache.spark.sql.execution.SparkPlan
 
-import com.databricks.spark.sql.perf.CpuProfile
+import com.databricks.spark.sql.perf.cpu._
 
 /**
  * A collection of queries that test a particular aspect of Spark SQL.
