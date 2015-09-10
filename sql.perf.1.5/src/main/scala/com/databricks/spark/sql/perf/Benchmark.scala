@@ -16,6 +16,9 @@
 
 package com.databricks.spark.sql.perf
 
+
+import com.databricks.spark.sql.cpu
+
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 import scala.concurrent._
@@ -26,7 +29,9 @@ import org.apache.spark.sql.{AnalysisException, DataFrame, SQLContext}
 import org.apache.spark.sql.catalyst.analysis.UnresolvedRelation
 import org.apache.spark.sql.execution.SparkPlan
 
-import com.databricks.spark.sql.perf.cpu._
+import com.databricks.spark.sql.cpu.getCpuLocation
+import com.databricks.spark.sql.cpu._
+
 
 /**
  * A collection of queries that test a particular aspect of Spark SQL.

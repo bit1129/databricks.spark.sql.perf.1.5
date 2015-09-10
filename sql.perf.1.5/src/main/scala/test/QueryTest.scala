@@ -7,7 +7,7 @@ object QueryTest {
     val dsdgenDir ="/export/App/TPCDSVersion1.3.1/dbgen2"
     val scaleFactor = 30
     val tables = new Tables(sqlContext, dsdgenDir, scaleFactor)
-    val location="hdfs://ns1/tmp/spark_perf"
+    val location="hdfs://ns1/tmp/spark_perf/spark.1.5"
     val format= "parquet"
     val overwrite = true
     val partitionTables=true
@@ -25,10 +25,7 @@ object QueryTest {
 
     val tpcds = new TPCDS (sqlContext = sqlContext)
 
-    import com.databricks.spark.sql.perf.tpcds.SimpleQueries
-    val queries =  SimpleQueries.q7Derived
-
-    val experiment = tpcds.runExperiment(queriesToRun =SimpleQueries.q7Derived)
+    val experiment = tpcds.runExperiment(queriesToRun =tpcds.q7Derived)
 
   }
 }

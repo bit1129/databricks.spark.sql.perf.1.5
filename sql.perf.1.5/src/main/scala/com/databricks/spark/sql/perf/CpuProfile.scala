@@ -33,7 +33,7 @@ import com.twitter.jvm.CpuProfile
  * A collection of utilities for parsing stacktraces that have been recorded in JSON and generating visualizations
  * on where time is being spent.
  */
-package object perf {
+package object cpu {
 
   // Placeholder for DBFS.
   type FS = {
